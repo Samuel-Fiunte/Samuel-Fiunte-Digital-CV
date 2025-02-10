@@ -1,5 +1,5 @@
 
-**Samuel Fiunte**\
+**Samuel Fiunte**
 
 **QA Engineer**\
 London • E1 | 07554 624550 | [fiunte.matarredona@gmail.com](mailto\:fiunte.matarredona@gmail.com)
