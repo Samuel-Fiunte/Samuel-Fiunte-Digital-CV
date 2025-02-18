@@ -8,11 +8,7 @@ London • E1 | **Phone:** Available on request | **Email:** Available on reques
 <div id="contactModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <form id="contact-form" onsubmit="sendRequest(event)">
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" required>
-      <button type="submit">Request Info</button>
-    </form>
+    <p>Contact information is available on request. Please enter your email to receive the details.</p>
   </div>
 </div>
 
@@ -50,12 +46,7 @@ London • E1 | **Phone:** Available on request | **Email:** Available on reques
   }
 </style>
 
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
-  (function() {
-    emailjs.init("your_user_id");
-  })();
-
   // Get the modal
   var modal = document.getElementById("contactModal");
 
@@ -84,26 +75,7 @@ London • E1 | **Phone:** Available on request | **Email:** Available on reques
       modal.style.display = "none";
     }
   }
-
-  function sendRequest(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const templateParams = {
-      to_email: email,
-      message: 'Here are my contact details:\n\nPhone: [Your Phone Number]\nEmail: [Your Email Address]'
-    };
-
-    emailjs.send('your_service_id', 'your_template_id', templateParams)
-      .then(function(response) {
-        alert('Request sent successfully!');
-        modal.style.display = "none";
-      }, function(error) {
-        alert('Failed to send request.');
-      });
-  }
 </script>
-[fiunte.matarredona@gmail.com](mailto\:fiunte.matarredona@gmail.com)
-
 ---
 
 ### **Professional Summary**
