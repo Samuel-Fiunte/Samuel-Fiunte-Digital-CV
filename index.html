@@ -2,15 +2,45 @@
 **Samuel Fiunte**
 
 **QA Engineer**\
-London • E1 | **Phone:** Available on request | **Email:** Available on request
+London • E1 | **Phone:** Available on request | **Email:** <a href="javascript:void(0);" onclick="openModal()">Available on request</a>
 
 <!-- Modal -->
-<div id="contactModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Contact information is available on request. Please enter your email to receive the details.</p>
+<div id="contact-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+  <div style="background:#fff; padding:20px; margin:10% auto; width:300px; text-align:center; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    <h3>Request Contact Info</h3>
+    <p>Enter your email to receive the contact details:</p>
+    <input type="email" id="emailInput" placeholder="Your email" style="width:90%; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;">
+    <br>
+    <button onclick="submitRequest()" style="background:#007BFF; color:white; border:none; padding:8px 12px; cursor:pointer; border-radius:5px;">Submit</button>
+    <button onclick="closeModal()" style="background:#ccc; border:none; padding:8px 12px; cursor:pointer; border-radius:5px;">Close</button>
   </div>
 </div>
+
+<script>
+function openModal() {
+  document.getElementById('contact-modal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('contact-modal').style.display = 'none';
+}
+
+function submitRequest() {
+  let email = document.getElementById('emailInput').value;
+  if(email) {
+    alert('Contact details sent to: ' + email);
+    closeModal();
+  } else {
+    alert('Please enter a valid email.');
+  }
+}
+</script>
+---
+
+### **Professional Summary**
+
+Experienced QA Engineer skilled in diverse software development methodologies and Agile environments. Adept at ensuring product quality while meeting deadlines. Thrives in both independent and collaborative settings, with a strong belief in team cohesion as a driver of productivity.
+
 ---
 ### **Experience**
 
