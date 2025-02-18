@@ -2,12 +2,9 @@
 **Samuel Fiunte**
 
 **QA Engineer**\
-London • E1 | **Phone:** Available on request | **Email:** Available on request
-
-
-### **Professional Summary**
-
-Experienced QA Engineer skilled in diverse software development methodologies and Agile environments. Adept at ensuring product quality while meeting deadlines. Thrives in both independent and collaborative settings, with a strong belief in team cohesion as a driver of productivity.
+London • E1 | 
+**Phone:** Available on request
+**Email:** Available on request
 
 <!-- Modal -->
 <div id="contactModal" class="modal">
