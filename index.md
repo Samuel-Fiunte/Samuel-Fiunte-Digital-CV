@@ -4,6 +4,11 @@
 **QA Engineer**\
 London • E1 | **Phone:** Available on request | **Email:** Available on request
 
+
+### **Professional Summary**
+
+Experienced QA Engineer skilled in diverse software development methodologies and Agile environments. Adept at ensuring product quality while meeting deadlines. Thrives in both independent and collaborative settings, with a strong belief in team cohesion as a driver of productivity.
+
 <!-- Modal -->
 <div id="contactModal" class="modal">
   <div class="modal-content">
@@ -76,14 +81,8 @@ London • E1 | **Phone:** Available on request | **Email:** Available on reques
     }
   }
 </script>
----
-
-### **Professional Summary**
-
-Experienced QA Engineer skilled in diverse software development methodologies and Agile environments. Adept at ensuring product quality while meeting deadlines. Thrives in both independent and collaborative settings, with a strong belief in team cohesion as a driver of productivity.
 
 ---
-
 ### **Experience**
 
 #### **QA Engineer** – Nudge Global (Hybrid) | June 2023 – Present
