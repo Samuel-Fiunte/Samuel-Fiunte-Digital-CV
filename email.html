@@ -1,35 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter Email</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        #email-modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            padding: 20px; background: white; border: 1px solid black; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-    </style>
-</head>
-<body>
-
-<p>Email: <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showModal()">on demand</span></p>
-
-<div id="email-modal">
+<div id="email-modal" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    padding: 20px; background: white; border: 1px solid black; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
     <p>Enter your email:</p>
     <input type="email" id="user-email" placeholder="Your email" />
     <button onclick="hideModal()">Submit</button>
 </div>
 
 <script>
-function showModal() {
-    document.getElementById('email-trigger').style.display = 'none';
-    document.getElementById('email-modal').style.display = 'block';
-}
-
 function hideModal() {
-    document.getElementById('email-modal').style.display = 'none';
+    document.getElementById('modal-container').innerHTML = ''; // Removes the modal
+    document.getElementById('email-trigger').style.display = 'inline'; // Show "on demand" again
 }
 </script>
-
-</body>
-</html>
