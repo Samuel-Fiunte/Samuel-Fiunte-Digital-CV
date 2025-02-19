@@ -2,24 +2,8 @@
 **Samuel Fiunte**
 
 **QA Engineer**\
-London • E1 | **Phone:** Available on request | **Email**: <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showModal()">available on request</span>
+London • E1 | **Phone:** Available on request | **Email**: [Available on request](email.html)
 
-<div id="email-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background: white; border: 1px solid black;">
-    <p>Enter your email:</p>
-    <input type="email" id="user-email" />
-    <button onclick="hideModal()">Submit</button>
-</div>
-
-<script>
-function showModal() {
-    document.getElementById('email-trigger').style.display = 'none';
-    document.getElementById('email-modal').style.display = 'block';
-}
-
-function hideModal() {
-    document.getElementById('email-modal').style.display = 'none';
-}
-</script>
 ---
 
 ### **Professional Summary**
