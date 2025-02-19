@@ -2,37 +2,22 @@
 **Samuel Fiunte**
 
 **QA Engineer**\
-London • E1 | **Phone:** Available on request | **Email:** <a href="javascript:void(0);" onclick="openModal()">Available on request</a>
+London • E1 | **Phone:** Available on request | **Email**: <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showModal()">available on request</span>
 
-<!-- Modal -->
-<div id="contact-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
-  <div style="background:#fff; padding:20px; margin:10% auto; width:300px; text-align:center; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
-    <h3>Request Contact Info</h3>
-    <p>Enter your email to receive the contact details:</p>
-    <input type="email" id="emailInput" placeholder="Your email" style="width:90%; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;">
-    <br>
-    <button onclick="submitRequest()" style="background:#007BFF; color:white; border:none; padding:8px 12px; cursor:pointer; border-radius:5px;">Submit</button>
-    <button onclick="closeModal()" style="background:#ccc; border:none; padding:8px 12px; cursor:pointer; border-radius:5px;">Close</button>
-  </div>
+<div id="email-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background: white; border: 1px solid black;">
+    <p>Enter your email:</p>
+    <input type="email" id="user-email" />
+    <button onclick="hideModal()">Submit</button>
 </div>
 
 <script>
-function openModal() {
-  document.getElementById('contact-modal').style.display = 'block';
+function showModal() {
+    document.getElementById('email-trigger').style.display = 'none';
+    document.getElementById('email-modal').style.display = 'block';
 }
 
-function closeModal() {
-  document.getElementById('contact-modal').style.display = 'none';
-}
-
-function submitRequest() {
-  let email = document.getElementById('emailInput').value;
-  if(email) {
-    alert('Contact details sent to: ' + email);
-    closeModal();
-  } else {
-    alert('Please enter a valid email.');
-  }
+function hideModal() {
+    document.getElementById('email-modal').style.display = 'none';
 }
 </script>
 ---
