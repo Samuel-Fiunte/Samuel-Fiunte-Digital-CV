@@ -2,7 +2,22 @@
 **Samuel Fiunte**
 
 **QA Engineer**\
-London • E1 | **Phone:** Available on request | **Email**: [Available on request](email.html)
+London • E1 | **Phone:** Available on request |Email: <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="loadModal()">on demand</span>
+
+<div id="modal-container"></div>
+
+<script>
+function loadModal() {
+    fetch('email.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('email-trigger').style.display = 'none';
+        document.getElementById('modal-container').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading modal:', error));
+}
+</script>
+
 
 ---
 
