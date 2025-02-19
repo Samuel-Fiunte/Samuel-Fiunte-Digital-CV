@@ -4,24 +4,28 @@
 **QA Engineer**\
 London • E1 | **Phone:** Available on request |Email: <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>
 
-<span id="modal-container"></span>
+<div id="modal-container" style="display: inline;"></div>
 
 <script>
 function showInlineModal() {
-    document.getElementById('email-trigger').style.display = 'none'; // Hide "Available on request"
+    document.getElementById('email-trigger').style.display = 'none'; // Hide the "Available on request"
     
-    let modal = document.createElement('span'); // Create a small inline modal
-    modal.innerHTML = `
-        <span id="email-box" style="display: inline-block; padding: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px;">
+    // Create and insert modal content
+    let modalHTML = `
+        <div id="email-box" style="display: inline-block; padding: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px;">
             <input type="email" id="user-email" placeholder="Enter your email" style="padding: 5px; margin-right: 5px; width: 150px;"/>
             <button onclick="hideInlineModal()" style="padding: 5px;">Submit</button>
-        </span>
+        </div>
     `;
-    document.getElementById('modal-container').appendChild(modal);
+    
+    // Insert the modal into the modal container
+    document.getElementById('modal-container').innerHTML = modalHTML;
 }
 
 function hideInlineModal() {
-    document.getElementById('modal-container').innerHTML = '<span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>';
+    // Hide the modal and show the "Available on request" text
+    document.getElementById('modal-container').innerHTML = ''; // Clear modal
+    document.getElementById('email-trigger').style.display = 'inline'; // Show the text again
 }
 </script>
 
