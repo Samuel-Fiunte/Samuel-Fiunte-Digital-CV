@@ -2,23 +2,28 @@
 **Samuel Fiunte**
 
 **QA Engineer**\
-London • E1 | **Phone:** Available on request |Email: <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="loadModal()">Available on request</span>
+London • E1 | **Phone:** Available on request |Email: <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>
 
 <span id="modal-container"></span>
 
 <script>
-function loadModal() {
-    fetch('email.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('email-trigger').style.display = 'none'; // Hide "on demand" text
-        document.getElementById('modal-container').innerHTML = data; // Insert modal
-    })
-    .catch(error => console.error('Error loading modal:', error));
+function showInlineModal() {
+    document.getElementById('email-trigger').style.display = 'none'; // Hide "Available on request"
+    
+    let modal = document.createElement('span'); // Create a small inline modal
+    modal.innerHTML = `
+        <span id="email-box" style="display: inline-block; padding: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="email" id="user-email" placeholder="Enter your email" style="padding: 5px; margin-right: 5px; width: 150px;"/>
+            <button onclick="hideInlineModal()" style="padding: 5px;">Submit</button>
+        </span>
+    `;
+    document.getElementById('modal-container').appendChild(modal);
+}
+
+function hideInlineModal() {
+    document.getElementById('modal-container').innerHTML = '<span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>';
 }
 </script>
-
-
 
 ---
 
