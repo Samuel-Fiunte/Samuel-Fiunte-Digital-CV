@@ -4,7 +4,7 @@
 **QA Engineer**\
 London • E1 | **Phone:** Available on request  <span id="email-container" style="display: inline;">
     <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>
-</span>|
+</span>
 <script>
 function showInlineModal() {
     let container = document.getElementById('email-container');
@@ -25,7 +25,7 @@ function hideInlineModal() {
     container.innerHTML = `<span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>`;
 }
 </script>
-**Email**: <span id="email-container" style="display: inline;">
+| **Email**: <span id="email-container" style="display: inline;">
     <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>
 </span>
 
