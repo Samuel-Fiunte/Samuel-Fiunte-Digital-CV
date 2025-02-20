@@ -2,45 +2,25 @@
 **Samuel Fiunte**
 
 **QA Engineer**\
-London • E1 | **Phone:** <span id="phone-container" style="display: inline;">
-    <span id="phone-trigger" style="color: blue; cursor: pointer;" onclick="showPhoneModal()">Available on request</span>
-</span>
-
-| **Email**: <span id="email-container" style="display: inline;">
-    <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showEmailModal()">Available on request</span>
+London • E1 | **Contact Info:** <span id="contact-container" style="display: inline;">
+    <span id="contact-trigger" style="color: blue; cursor: pointer;" onclick="showContactModal()">Available on request</span>
 </span>
 
 <script>
-function showPhoneModal() {
-    let container = document.getElementById('phone-container');
+function showContactModal() {
+    let container = document.getElementById('contact-container');
     
     container.innerHTML = `
-        <span id="phone-box" style="display: inline-flex; align-items: center; gap: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-            <input type="text" id="user-phone" placeholder="Enter your phone" style="padding: 5px; width: 150px; border: none; outline: none;"/>
-            <button onclick="hidePhoneModal()" style="padding: 5px; border: none; background: #007bff; color: white; border-radius: 3px; cursor: pointer;">Submit</button>
+        <span id="contact-box" style="display: inline-flex; align-items: center; gap: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
+            <input type="email" id="user-email" placeholder="Enter your email" style="padding: 5px; width: 200px; border: none; outline: none;"/>
+            <button onclick="hideContactModal()" style="padding: 5px; border: none; background: #007bff; color: white; border-radius: 3px; cursor: pointer;">Submit</button>
         </span>
     `;
 }
 
-function hidePhoneModal() {
-    let container = document.getElementById('phone-container');
-    container.innerHTML = `<span id="phone-trigger" style="color: blue; cursor: pointer;" onclick="showPhoneModal()">Available on request</span>`;
-}
-
-function showEmailModal() {
-    let container = document.getElementById('email-container');
-    
-    container.innerHTML = `
-        <span id="email-box" style="display: inline-flex; align-items: center; gap: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-            <input type="email" id="user-email" placeholder="Enter your email" style="padding: 5px; width: 150px; border: none; outline: none;"/>
-            <button onclick="hideEmailModal()" style="padding: 5px; border: none; background: #007bff; color: white; border-radius: 3px; cursor: pointer;">Submit</button>
-        </span>
-    `;
-}
-
-function hideEmailModal() {
-    let container = document.getElementById('email-container');
-    container.innerHTML = `<span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showEmailModal()">Available on request</span>`;
+function hideContactModal() {
+    let container = document.getElementById('contact-container');
+    container.innerHTML = `<span id="contact-trigger" style="color: blue; cursor: pointer;" onclick="showContactModal()">Available on request</span>`;
 }
 </script>
 ---
