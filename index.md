@@ -2,54 +2,47 @@
 **Samuel Fiunte**
 
 **QA Engineer**\
-London • E1 | **Phone:** Available on request  <span id="email-container" style="display: inline;">
-    <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>
+London • E1 | **Phone:** <span id="phone-container" style="display: inline;">
+    <span id="phone-trigger" style="color: blue; cursor: pointer;" onclick="showPhoneModal()">Available on request</span>
 </span>
-<script>
-function showInlineModal() {
-    let container = document.getElementById('email-container');
-    
-    // Replace "Available on request" with the inline email input
-    container.innerHTML = `
-        <span id="email-box" style="display: inline-flex; align-items: center; gap: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-            <input type="email" id="user-email" placeholder="Enter your email" style="padding: 5px; width: 150px; border: none; outline: none;"/>
-            <button onclick="hideInlineModal()" style="padding: 5px; border: none; background: #007bff; color: white; border-radius: 3px; cursor: pointer;">Submit</button>
-        </span>
-    `;
-}
 
-function hideInlineModal() {
-    let container = document.getElementById('email-container');
-    
-    // Restore the original "Available on request" text
-    container.innerHTML = `<span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>`;
-}
-</script>
 | **Email**: <span id="email-container" style="display: inline;">
-    <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>
+    <span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showEmailModal()">Available on request</span>
 </span>
 
 <script>
-function showInlineModal() {
-    let container = document.getElementById('email-container');
+function showPhoneModal() {
+    let container = document.getElementById('phone-container');
     
-    // Replace "Available on request" with the inline email input
     container.innerHTML = `
-        <span id="email-box" style="display: inline-flex; align-items: center; gap: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-            <input type="email" id="user-email" placeholder="Enter your email" style="padding: 5px; width: 150px; border: none; outline: none;"/>
-            <button onclick="hideInlineModal()" style="padding: 5px; border: none; background: #007bff; color: white; border-radius: 3px; cursor: pointer;">Submit</button>
+        <span id="phone-box" style="display: inline-flex; align-items: center; gap: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
+            <input type="text" id="user-phone" placeholder="Enter your phone" style="padding: 5px; width: 150px; border: none; outline: none;"/>
+            <button onclick="hidePhoneModal()" style="padding: 5px; border: none; background: #007bff; color: white; border-radius: 3px; cursor: pointer;">Submit</button>
         </span>
     `;
 }
 
-function hideInlineModal() {
+function hidePhoneModal() {
+    let container = document.getElementById('phone-container');
+    container.innerHTML = `<span id="phone-trigger" style="color: blue; cursor: pointer;" onclick="showPhoneModal()">Available on request</span>`;
+}
+
+function showEmailModal() {
     let container = document.getElementById('email-container');
     
-    // Restore the original "Available on request" text
-    container.innerHTML = `<span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showInlineModal()">Available on request</span>`;
+    container.innerHTML = `
+        <span id="email-box" style="display: inline-flex; align-items: center; gap: 5px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
+            <input type="email" id="user-email" placeholder="Enter your email" style="padding: 5px; width: 150px; border: none; outline: none;"/>
+            <button onclick="hideEmailModal()" style="padding: 5px; border: none; background: #007bff; color: white; border-radius: 3px; cursor: pointer;">Submit</button>
+        </span>
+    `;
+}
+
+function hideEmailModal() {
+    let container = document.getElementById('email-container');
+    container.innerHTML = `<span id="email-trigger" style="color: blue; cursor: pointer;" onclick="showEmailModal()">Available on request</span>`;
 }
 </script>
-
 ---
 
 ### **Professional Summary**
